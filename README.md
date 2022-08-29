@@ -1,15 +1,9 @@
-# Flywheel v2
+# Maia Dividends Contract
 Flywheel is a suite of open source token incentives and governance infrastructure using modern and modular solidity patterns to easily interface with other platforms.
 
-It is built by the [Tribe DAO](http://tribedao.xyz/) using [Foundry](https://github.com/gakonst/foundry) and [Solmate](https://github.com/Rari-Capital/solmate).
+It is built using FlyWheel V2 from [Tribe DAO](http://tribedao.xyz/), [Foundry](https://github.com/gakonst/foundry) and [Solmate](https://github.com/Rari-Capital/solmate).
 
 Flywheel is completely on-chain and composable, for maximum compatibility with smart contract systems.
-
-**Coming Soon**
-- xERC4626 - single sided staking
-- ERC20Gauges/FlywheelGaugeRewards - allow token holders to direct rewards
-- ERC20MultiVotes - GovernorBravo voting with multi-delegation capabilities
-
 
 ## Overview
 
@@ -40,10 +34,6 @@ The rewards can be divided according to any algorithm, some examples:
 Normally, rewards for users are calulated by dividing the user's `balanceOf` on the strategy divided by the `totalSupply` of the strategy.
 
 However, some strategies require additional logic to boost or otherwise transform the user's balance. This is where the boosting module can do just that. If added to the incentives engine, it calculates a users rewards by dividing their boosted balance by the bosoted total supply.
-
-### ERC20 Token Utilities
-
-**Coming Soon**
 
 ## Adding Flywheel to Your Smart Contracts
 

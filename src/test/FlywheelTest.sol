@@ -68,9 +68,9 @@ contract FlywheelTest is DSTestPlus {
         flywheel.setFlywheelRewards(IFlywheelRewards(address(1)));
     }
 
-    function testSetFlywheelBooster(IFlywheelBooster booster) public {
-        flywheel.setBooster(booster);
-        require(flywheel.flywheelBooster() == booster);
+    function testSetFlywheelBooster(IFlywheelBooster _booster) public {
+        flywheel.setBooster(_booster);
+        require(flywheel.flywheelBooster() == _booster);
     }
 
     function testSetFlywheelBoosterUnauthorized() public {
