@@ -37,10 +37,9 @@ contract RewardsDepot is Auth {
     //////////////////////////////////////////////////////////////*/
 
     /// @notice Return available reward amount and transfer them to rewardsContract.
-    function getRewards() external returns (uint256) {
+    function getRewards() external returns (uint256 balance) {
         require(address(msg.sender) == rewardsContract, "UNAUTHORIZED");
-        uint256 balance = asset.balanceOf(address(this));
+        balance = asset.balanceOf(address(this));
         asset.transfer(rewardsContract, balance);
-        return balance;
     }
 }
